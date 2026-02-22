@@ -1,0 +1,100 @@
+[
+  {
+    "utility": "Ontario Residential Rates",
+    "region": "ON",
+    "basePlans": [
+      {
+        "name": "Time-Of-Use (TOU)",
+        "rateWindows": [
+          { "startHour": 19, "endHour": 7, "rate": 0.098, "peakType": "Off-Peak", "color": "green", "dayType": ["weekday","weekend","statHoliday"] },
+          { "startHour": 7, "endHour": 11, "rate": 0.203, "peakType": "On-Peak", "color": "red", "dayType": ["weekday"] },
+          { "startHour": 11, "endHour": 17, "rate": 0.157, "peakType": "Mid-Peak", "color": "yellow", "dayType": ["weekday"] },
+          { "startHour": 17, "endHour": 19, "rate": 0.203, "peakType": "On-Peak", "color": "red", "dayType": ["weekday"] },
+        ]
+      },
+      {
+        "name": "Ultra Low Overnight (ULO)",
+        "rateWindows": [
+          { "startHour": 23, "endHour": 7, "rate": 0.039, "peakType": "Ultra Low", "color": "blue", "dayType": ["weekday","weekend","statHoliday"] },
+          { "startHour": 7, "endHour": 16, "rate": 0.157, "peakType": "Mid-Peak", "color": "yellow", "dayType": ["weekday"] },
+          { "startHour": 16, "endHour": 21, "rate": 0.391, "peakType": "ULO-Peak", "color": "purple", "dayType": ["weekday"] },
+          { "startHour": 21, "endHour": 23, "rate": 0.157, "peakType": "Mid-Peak", "color": "yellow", "dayType": ["weekday","weekend","statHoliday"] }
+        ]
+      }
+    ],
+    "addOns": []
+  },
+  {
+    "utility": "Fortis BC",
+    "region": "BC",
+    "basePlans": [
+      {
+        "name": "Tiered",
+        "rateWindows": [
+          {
+            "startHour": 0,
+            "endHour": 24,
+            "rate": 0.1200,
+            "peakType": "Base",
+            "color": "blue",
+            "dayType": ["weekday","weekend","statHoliday"]
+          }
+        ]
+      },
+      {
+        "name": "Flat",
+        "rateWindows": [
+          {
+            "startHour": 0,
+            "endHour": 24,
+            "rate": 0.1450,
+            "peakType": "Base",
+            "color": "blue",
+            "dayType": ["weekday","weekend","statHoliday"]
+          }
+        ]
+      }
+    ],
+    "addOns": [
+      {
+        "name": "Time-of-Day",
+        "adjustments": [
+          { "startHour": 16, "endHour": 21, "adjustment": 0.05, "label": "On-Peak Surcharge" },
+          { "startHour": 23, "endHour": 7, "adjustment": -0.05, "label": "Overnight Discount" },
+          { "startHour": 7, "endHour": 16, "adjustment": 0.0, "label": "Base Rate" },
+          { "startHour": 21, "endHour": 23, "adjustment": 0.0, "label": "Base Rate" }
+        ]
+
+      }
+    ]
+  },
+  {
+    "utility": "BC Hydro",
+    "region": "BC",
+    "basePlans": [
+      {
+        "name": "Tiered",
+        "rateWindows": [
+          { "startHour": 0, "endHour": 24, "rate": 0.1172, "peakType": "Base", "color": "blue", "dayType": ["weekday","weekend","statHoliday"] }
+        ]
+      },
+      {
+        "name": "Flat",
+        "rateWindows": [
+          { "startHour": 0, "endHour": 24, "rate": 0.1408, "peakType": "Base", "color": "blue", "dayType": ["weekday","weekend","statHoliday"] }
+        ]
+      }
+    ],
+    "addOns": [
+      {
+        "name": "Time-of-Day",
+        "adjustments": [
+          { "startHour": 16, "endHour": 21, "adjustment": 0.05, "label": "On-Peak Surcharge" },
+          { "startHour": 23, "endHour": 7, "adjustment": -0.05, "label": "Overnight Discount" },
+          { "startHour": 7, "endHour": 16, "adjustment": 0.0, "label": "Base Rate" },
+          { "startHour": 21, "endHour": 23, "adjustment": 0.0, "label": "Base Rate" }
+        ]
+      }
+    ]
+  }
+]
