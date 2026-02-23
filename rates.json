@@ -1,9 +1,18 @@
 [
+    {
+      "metadata": {
+        "lastUpdated": "2026-01-01",
+        "ON_LAST_UPDATED": "2026-01-01",
+        "BC_LAST_UPDATED": "2026-01-01",
+      }
+    }
   {
     "utility": "Ontario Residential Rates",
     "region": "ON",
     "basePlans": [
       {
+        "_comment": "Updated ON rates Jan 2026 per OEB announcement",
+        "_link":"https://www.oeb.ca/consumer-information-and-protection/electricity-rates",
         "name": "Time-Of-Use (TOU)",
         "rateWindows": [
           { "startHour": 19, "endHour": 7, "rate": 0.098, "peakType": "Off-Peak", "color": "green", "dayType": ["weekday","weekend","statHoliday"] },
@@ -25,6 +34,8 @@
     "addOns": []
   },
   {
+    "_comment": "Updated BC rates Jan 2026 per BCUC announcement",
+    "_link": "https://www.bcuc.com/WhatWeDo/ResidentialEnergyRates",
     "utility": "Fortis BC",
     "region": "BC",
     "basePlans": [
